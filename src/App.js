@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
 import Employee from './pages/Employee';
-import Setting from './pages/Setting';
 import Payslip from './pages/Payslip';
 import './App.css';
 import Dashboard from './pages/Dashboard';
@@ -12,6 +11,7 @@ import EmployeeLeave from './pages/EmployeeLeave';
 import EmployeeRegularization from './pages/EmployeeRegularization';
 import { HelmetProvider } from 'react-helmet-async';
 import ChangePassword from './pages/ChangePassword';
+import Attendance from './pages/Attendance';
 
 function App() {
   return (
@@ -22,19 +22,19 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="employee" element={<Employee />} />
-            <Route path="setting" element={<Setting />} />
             <Route path="payslip" element={<Payslip />} />
             <Route path="employee/profile" element={<EmployeeProfile />} />
             <Route path="employee/leave" element={<EmployeeLeave />} />
             <Route path='employee/regularization' element={<EmployeeRegularization />} />
             <Route path='/changepassword' element={<ChangePassword />} />
+            <Route path='/attendance' element={<Attendance />} />
           </Route>
         </Routes>
       </Router>
     </HelmetProvider>
 
   );
-  
+
 }
 
 export default App;

@@ -5,9 +5,43 @@ section {
     background-size: cover;
 }
 
+.login-div {
+    width: 80%;
+    padding-bottom: 25px;
+}
+
+.btn-primary {
+    background-color: #21BEFF;
+    border: 1px solid #21BEFF;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+}
+
+.btn-primary:hover {
+    background-color: #21BEFF;
+    border: 1px solid #21BEFF;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+}
+
+.btn-primary:focus {
+    background-color: #21BEFF;
+    border: 1px solid #21BEFF;
+    color: #fff;
+    padding: 5px 10px 5px 10px;
+}
+
 /* modal */
+.modal {
+    background-color: #c0e7f79e;
+}
+
 .close {
     border: none;
     background: none;
     padding-left: 300px;
+}
+
+.modal-content {
+    transform: translate(0%, 100%);
 }

@@ -1,0 +1,9 @@
+.menu-arrow {
+    margin-left: 30px;
+    margin-top: 5px;
+}
+.sub-menus .sub-sub-menus ::before {
+     content: "-";
+     margin-right: 5px;
+     color: #21beff;
+}

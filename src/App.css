@@ -78,7 +78,6 @@ body {
 
 .sidebar {
   width: 250px;
-  height: 100vh;
   background-color: #343a40;
   padding-top: 20px;
   top: 0;
@@ -164,11 +163,11 @@ section {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  height: 300px;
+  height: 400px;
   width: 400px;
   border-radius: 20px;
-  box-shadow: 5px 5px 10px #9c9393,
-    -5px -5px 10px #c0adad;
+  box-shadow: 5px 5px 10px #f6f4f4,
+    -5px -5px 10px #f1acac;
   background: transparent;
 }
 
@@ -186,4 +185,3 @@ section {
 .card-heading {
   padding: 5px 0px 0px 10px;
 }
-
