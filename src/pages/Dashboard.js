@@ -73,6 +73,76 @@ function Dashboard() {
           </div>
         </div>
       </div>
+
+      <div className='row pt-2'>
+        <div className='col-lg-3 col-md-6 col-sm-12'>
+             <div className='card'>
+              <div className='card-block'>
+                <h5 className='card-header'>Data</h5>
+                <div className='card-content'>
+                  <div className='d-flex justify-content-around mt-2'>
+                    <div className='card1'>
+                        <div className='text-center pt-3'>
+                          <p className='mb-0'>Leave</p>
+                          <p className='mb-0'>0</p>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='card-block'>
+                        <div className='text-center'>
+                          <p>Regularize</p>
+                          <p>0</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='d-flex justify-content-around mt-2'>
+                    <div className='card'>
+                      <div className='card-block'>
+                        <div className='text-center'>
+                          <p>Permission</p>
+                          <p>0</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='card-block'>
+                        <div className='text-center'>
+                          <p>Comp Off</p>
+                          <p>0</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className='d-flex justify-content-around mt-2'>
+                    <div className='card'>
+                      <div className='card-block'>
+                        <div className='text-center'>
+                          <p>Holidays</p>
+                          <p>0</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className='card'>
+                      <div className='card-block'>
+                        <div className='text-center'>
+                          <p>on Duty</p>
+                          <p>0</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+             </div>
+        </div>
+        <div className='col-lg-3 col-md-6 col-sm-12'>
+             
+        </div>
+        <div className='col-lg-3 col-md-6 col-sm-12'>
+             
+        </div>
+      </div>
     </Fragment>
 
   );

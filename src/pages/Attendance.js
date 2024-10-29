@@ -1,5 +1,12 @@
+import MetaData from "../components/MetaData";
+
 export default function Attendance() {
     return (
-        <h1>This is From Attendance</h1>
+        <div className="card">
+            <div className="card-block">
+                <MetaData title="attendance" />
+                <h5 className="card-heading">Attendance Log</h5>
+            </div>
+        </div>
     )
 }

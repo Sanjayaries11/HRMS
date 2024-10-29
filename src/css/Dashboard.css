@@ -73,3 +73,10 @@
 .block4:hover {
   transform: scale(1.05);
 }
+
+/* data */
+.card1 {
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 10px 25px;
+}

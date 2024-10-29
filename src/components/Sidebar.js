@@ -85,9 +85,9 @@ function Sidebar() {
             {isReportMenuOpen && (
               <ul className='submenu'>
                 <li className='sub-sub-menus'><Link to="/attendance"><FaClipboardCheck /> Attendance</Link></li>
-                <li className='sub-sub-menus'><Link to=""><FaPlaneDeparture /> Leave</Link></li>
-                <li className='sub-sub-menus'><Link to=""><FaCheckCircle /> Regularization</Link></li>
-                <li className='sub-sub-menus'><Link to=""><FaLock /> Permission</Link></li>
+                <li className='sub-sub-menus'><Link to="/leave"><FaPlaneDeparture /> Leave</Link></li>
+                <li className='sub-sub-menus'><Link to="/regularization"><FaCheckCircle /> Regularization</Link></li>
+                <li className='sub-sub-menus'><Link to="/permission"><FaLock /> Permission</Link></li>
               </ul>
             )}
           </li>
@@ -98,12 +98,12 @@ function Sidebar() {
             {isPayrollMenuOpen && (
               <ul className='submenu'>
                 <li className='sub-sub-menus'><Link to="/payslip"><FaFileInvoiceDollar /> Payslip</Link></li>
-                <li className='sub-sub-menus'><Link to="/payslip"><FaSignature /> IT Declaration</Link></li>
+                <li className='sub-sub-menus'><Link to="/itdeclaration"><FaSignature /> IT Declaration</Link></li>
               </ul>
             )}
           </li>
-          <li className="sub-menus"><Link to=""><FaTicketAlt /> Ticket</Link></li>
-          <li className="sub-menus"><Link to=""><FaQuestionCircle />Help</Link></li>
+          <li className="sub-menus"><Link to="/ticket"><FaTicketAlt /> Ticket</Link></li>
+          <li className="sub-menus"><Link to="/help"><FaQuestionCircle />Help</Link></li>
           <li className="sub-menus" onClick={logoutHandler}><Link to="/logout"><FaSignOutAlt /> Logout</Link></li>
         </ul>
       </aside>
@@ -112,3 +112,111 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
+
+
+
+// import React, { useState } from 'react';
+// import { Link, useNavigate } from 'react-router-dom';
+// import {
+//   FaTachometerAlt, FaUser, FaFileInvoiceDollar,
+//   FaAngleDown, FaAngleUp, FaIdBadge, FaCalendarAlt,
+//   FaCheckCircle, FaSignOutAlt, FaAlignJustify, FaArrowRight,
+//   FaFileAlt, FaClipboardCheck, FaPlaneDeparture, FaLock, FaTicketAlt, FaDollarSign, FaQuestionCircle, FaSignature
+// } from 'react-icons/fa';
+// import '../css/Sidebar.css';
+
+// function Sidebar() {
+//   const [openMenu, setOpenMenu] = useState(null); // State for tracking the open menu
+//   const [isSidebarOpen, setSidebarOpen] = useState(true);
+//   const navigate = useNavigate();
+
+//   const toggleMenu = (menuName) => {
+//     setOpenMenu((prevMenu) => (prevMenu === menuName ? null : menuName));
+//   };
+
+//   const toggleSidebar = () => {
+//     setSidebarOpen(!isSidebarOpen);
+//   };
+
+//   const logoutHandler = () => {
+//     navigate("/login");
+//   };
+
+//   return (
+//     <>
+//       <button
+//         className="sidebar-toggle-btn"
+//         onClick={toggleSidebar}
+//         style={{
+//           cursor: 'pointer',
+//           position: 'absolute',
+//           left: isSidebarOpen ? '230px' : '230px', // Adjust position based on sidebar state
+//           top: '20px',
+//           zIndex: 999,
+//           border: "none",
+//           background: 'none',
+//           fontSize: '1.5rem',
+//         }}
+//       >
+//         {isSidebarOpen ? <FaAlignJustify style={{ fontSize: "20px", color: "#21bcff" }} /> : <FaArrowRight style={{ fontSize: "20px", color: "#21bcff" }} />}
+//       </button>
+
+//       <aside
+//         className="sidebar"
+//         style={{
+//           width: isSidebarOpen ? '250px' : '0px',
+//           transition: 'width 0.3s ease-in-out',
+//           overflow: 'hidden',
+//         }}
+//       >
+//         <ul className='menus'>
+//           <li className='sub-menus'><Link to="/"><FaTachometerAlt /> Dashboard</Link></li>
+//           <li className="sub-menus">
+//             <div onClick={() => toggleMenu('employee')} style={{ cursor: 'pointer' }}>
+//               <FaUser /> Employee {openMenu === 'employee' ? <FaAngleUp className='menu-arrow' /> : <FaAngleDown className='menu-arrow' />}
+//             </div>
+//             {openMenu === 'employee' && (
+//               <ul className="submenu">
+//                 <li className="sub-sub-menus"><Link to="/employee/profile"><FaIdBadge /> Employee Profile</Link></li>
+//                 <li className="sub-sub-menus"><Link to="/employee/leave"><FaCalendarAlt /> Leave Request</Link></li>
+//                 <li className="sub-sub-menus"><Link to="/employee/regularization"><FaCheckCircle /> Regularization</Link></li>
+//                 <li className='sub-sub-menus'><Link to="/employee/permission"><FaLock /> Permission</Link></li>
+//               </ul>
+//             )}
+//           </li>
+//           <li className='sub-menus'>
+//             <div onClick={() => toggleMenu('reports')} style={{ cursor: "pointer" }}>
+//               <FaFileAlt /> Reports {openMenu === 'reports' ? <FaAngleUp className='menu-arrow' /> : <FaAngleDown className='menu-arrow' />}
+//             </div>
+//             {openMenu === 'reports' && (
+//               <ul className='submenu'>
+//                 <li className='sub-sub-menus'><Link to="/attendance"><FaClipboardCheck /> Attendance</Link></li>
+//                 <li className='sub-sub-menus'><Link to=""><FaPlaneDeparture /> Leave</Link></li>
+//                 <li className='sub-sub-menus'><Link to=""><FaCheckCircle /> Regularization</Link></li>
+//                 <li className='sub-sub-menus'><Link to=""><FaLock /> Permission</Link></li>
+//               </ul>
+//             )}
+//           </li>
+//           <li className='sub-menus'>
+//             <div onClick={() => toggleMenu('payroll')} style={{ cursor: "pointer" }}>
+//               <FaDollarSign /> Payroll {openMenu === 'payroll' ? <FaAngleUp className='menu-arrow' /> : <FaAngleDown className='menu-arrow' />}
+//             </div>
+//             {openMenu === 'payroll' && (
+//               <ul className='submenu'>
+//                 <li className='sub-sub-menus'><Link to="/payslip"><FaFileInvoiceDollar /> Payslip</Link></li>
+//                 <li className='sub-sub-menus'><Link to="/payslip"><FaSignature /> IT Declaration</Link></li>
+//               </ul>
+//             )}
+//           </li>
+//           <li className="sub-menus"><Link to=""><FaTicketAlt /> Ticket</Link></li>
+//           <li className="sub-menus"><Link to=""><FaQuestionCircle />Help</Link></li>
+//           <li className="sub-menus" onClick={logoutHandler}><Link to="/logout"><FaSignOutAlt /> Logout</Link></li>
+//         </ul>
+//       </aside>
+//     </>
+//   );
+// }
+
+// export default Sidebar;
+
